@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const http = require('https');
+const http = require('http');
 const path = require('path');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
