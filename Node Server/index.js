@@ -1,6 +1,6 @@
 const express = require('express');
 const app = express();
-const http = require('http');
+const http = require('https');
 const path = require('path');
 const server = http.createServer(app);
 const { Server } = require("socket.io");
@@ -32,6 +32,6 @@ io.on('connection', (socket) => {
 
 });
 
-server.listen(8000, () => {
-  console.log('listening on :8000');
+server.listen(8080, () => {
+  console.log('listening on :8080');
 });
