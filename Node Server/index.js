@@ -9,6 +9,8 @@ const io = new Server(server);
 app.use(express.static(path.resolve("./Frontend")));
 
 app.get('/', (req, res) => {
+  const url = req.protocol + '://' + req.get('host') + req.originalUrl;
+  console.log('URL:', url);
     res.sendFile("/Frontend" + '/index.html');
   });
 
